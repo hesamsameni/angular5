@@ -1,0 +1,30 @@
+<input type="text" [(ngModel)]="name">
+<p>{{name}}</p>
+<h2 [ngClass]="testClass" (click)="sampleFunction($event);">Test</h2>
+<p>{{this.test}}</p>
+
+<!-- =======================IF ELSE================================ -->
+
+<!-- If Else Conditional -->
+<h2 *ngIf="displayName; else elseBlock">
+    First Text
+</h2>
+<!-- This is ELSE -->
+<ng-template #elseBlock>
+    <h2>It Works!</h2>
+</ng-template>
+<!--/ If Else Conditional -->
+
+<!-- ========================IF ELSE SECOND SYNTAX=============================== -->
+
+<!-- another Syntax for if else condtional statment -->
+<div *ngIf="testName; then thenBlock; else elseBlock2"></div>
+<!-- IF this THEN that ELSE -->
+<ng-template #thenBlock>
+    <h1>Then Block!</h1>
+</ng-template>
+<ng-template #elseBlock2>
+    <h1>Else Block!</h1>
+</ng-template>
+
+<!-- ======================================================= -->
