@@ -3,7 +3,7 @@
 <h2 [ngClass]="testClass" (click)="sampleFunction($event);">Test</h2>
 <p>{{this.test}}</p>
 
-<!-- =======================IF ELSE================================ -->
+<!-- ================================IF ELSE====================================== -->
 
 <!-- If Else Conditional -->
 <h2 *ngIf="displayName; else elseBlock">
@@ -15,7 +15,7 @@
 </ng-template>
 <!--/ If Else Conditional -->
 
-<!-- ========================IF ELSE SECOND SYNTAX=============================== -->
+<!-- =========================IF ELSE SECOND SYNTAX================================ -->
 
 <!-- another Syntax for if else condtional statment -->
 <div *ngIf="testName; then thenBlock; else elseBlock2"></div>
@@ -27,4 +27,11 @@
     <h1>Else Block!</h1>
 </ng-template>
 
-<!-- ======================================================= -->
+<!-- ================================ngSwicth===================================== -->
+
+<!-- color is defined in TS file -->
+<div [ngSwitch]="color">
+    <p *ngSwitchCase="'red'" style="color:red;">Red</p>
+    <p *ngSwitchCase="'blue'" style="color:blue;">Blue</p>
+    <p *ngSwitchCase="'green'" style="color:green;">Green</p>
+</div>

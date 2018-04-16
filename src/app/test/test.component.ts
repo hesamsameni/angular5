@@ -9,6 +9,7 @@ export class TestComponent implements OnInit {
   public name = 'Hesam';
   public hasError = true;
   public isSpecial = true;
+  public color = "blue";
   displayName = false;
   testName = false;
   public testClass = {
